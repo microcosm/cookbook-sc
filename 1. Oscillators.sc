@@ -1,0 +1,1 @@
+{SinOsc.ar(440)!2}.play
