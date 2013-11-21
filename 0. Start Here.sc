@@ -10,8 +10,11 @@
    Shift-Enter
    ===========
    Once you have a codeblock selected, use Shift-Enter to evaluate
-   the slected code. You should hear sound playing, or see some
+   the selected code. You should hear sound playing, OR see some
    response in the Post window.
+
+   Note that you can also place your cursor anywhere on a single line
+   of code and press Shift-Enter to execute only that line of code.
 
    Cmd-.
    =====
@@ -30,13 +33,23 @@
 
 */
 
-/* 1. This should make sound. If it doesn't, check your speakers and
-      your audio configuration. When working with sound, always
-      start with the volume LOW, then start the sound, then creep
-      the volume up. */
+/* 1. Place your cursor at the end of the code below, after play.
+      Press Shift-Enter. This should make sound.
+      - ALWAYS start with the volume LOW, then start the sound, then
+        creep the volume up.
+      - If you can't hear anything, check your speakers and your
+        audio configuration. */
 { SinOsc.ar(440)!2 }.play
 
-/* 2. Start your engines!
+/* 2. To visualize any sound function block like the one above,
+      switch play for plot.
+      - The argument is the number of seconds of playback to plot.
+        When you evaluate these lines you have to wait that number
+        of seconds before the results appear in the window. */
+{ SinOsc.ar(440)!2 }.plot(0.01)
+{ SinOsc.ar(440)!2 }.plot(2)
+
+/* 3. Start your engines!
       The codeblock below will give you an FFT window and an
       Oscilloscope window.
       - Once you run the codeblock the Oscilloscope window will jump
