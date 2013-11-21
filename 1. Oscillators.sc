@@ -1,5 +1,11 @@
 //Figure 2. A 440Hz sine wave
-{ SinOsc.ar(freq: 440) !2 }.play;
+(
+    x = {
+	    SinOsc.ar(freq: 440) !2
+    };
+    x.plot(0.005);
+    x.play;
+)
 
 //Figure 3. A 440Hz sine wave added to an 880Hz sine wave
 (
