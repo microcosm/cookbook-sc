@@ -68,9 +68,32 @@
     ~fundamental = 440;
 
     x = {
-	    Mix.fill(~numPartials, {|i|
-            var mul = (-1 ** i) * (~peak / (i + 1));
-            SinOsc.ar(~fundamental * (i + 1), mul: mul);
+        Mix.fill(~numPartials, {|i|
+            var j = i + 1;
+            var mul = (-1 ** i) * (~peak / j);
+            SinOsc.ar(~fundamental * j, mul: mul);
+        }) !2;
+    };
+    x.plot(0.005);
+    x.play;
+)
+
+/* Figure 7. A square wave.
+   =======================
+   - Only odd numbered partials.
+   - Since we are now only dealing with every other partial, and dropping
+     the in-between partials, we no longer have to keep switching from
+     positive to negative multiplier values. */
+(
+    ~peak = 0.5;
+    ~numPartials = 50;
+    ~fundamental = 440;
+
+    x = {
+        Mix.fill(~numPartials, {|i|
+            var j = (2 * i) + 1;
+            var mul = ~peak / j;
+            SinOsc.ar(~fundamental * j, mul: mul);
         }) !2;
     };
     x.plot(0.005);
