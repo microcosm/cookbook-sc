@@ -1,4 +1,5 @@
-//Figure 2. A 440Hz sine wave
+/* Figure 2. A 440Hz sine wave.
+   =========================== */
 (
     x = {
         SinOsc.ar(freq: 440) !2
@@ -7,8 +8,10 @@
     x.play;
 )
 
-//Figure 3. A 440Hz sine wave added to an 880Hz sine wave
-//Note the change in phase to position the two waves relative to each other
+/* Figure 3. A 440Hz sine wave added to an 880Hz sine wave.
+   =======================================================
+   - Notice the change in phase to position the two waves relative to each
+     other. */
 (
     x = {
         SinOsc.ar(440, phase: pi,  mul: 2/3) +
@@ -18,9 +21,11 @@
     x.play;
 )
 
-//Figure 3 can be written another way by modifying the multiplier only
-//instead of the phase
-//Notice the use of a negative value for the 880Hz SinOsc
+/* Figure 3 rewritten.
+   ==================
+   - Figure 3 can be written another way by modifying the multiplier only
+     instead of the phase.
+   - Notice the use of a negative value for the 880Hz SinOsc. */
 (
     ~peak = 0.75;
     x = {
@@ -31,9 +36,10 @@
     x.play;
 )
 
-//Figure 4. Three sine waves of frequency 440Hz, 880Hz, and 1320Hz
-//Notice we had to adjust the peak, and a pattern is starting to emerge
-//for multiplying by positive and negative numbers
+/* Figure 4. Three sine waves of frequency 440Hz, 880Hz, and 1320Hz.
+   ================================================================
+   - Notice we had to adjust the peak, and a pattern is starting to emerge
+     for multiplying by positive and negative numbers. */
 (
     ~peak = 0.65;
     x = {
@@ -45,3 +51,32 @@
     x.plot(0.005);
     x.play;
 )
+
+/* Figure 5. A sawtooth.
+   ====================
+   - Now we are using Mix.fill to automate the process of extending the
+     pattern above. Try adjusting ~numPartials to 50.
+   - Note that ** is an exponent operator. The code '-1 ** i' produces
+     the following pattern:
+     -1 ** 0 == 1
+     -1 ** 1 == -1
+     -1 ** 2 == 1
+     -1 ** 3 == -1 etc. */
+(
+    ~peak = 0.5;
+    ~numPartials = 15;
+    ~fundamental = 440;
+
+    x = {
+	    Mix.fill(~numPartials, {|i|
+            var mul = (-1 ** i) * (~peak / (i + 1));
+            SinOsc.ar(~fundamental * (i + 1), mul: mul);
+        }) !2;
+    };
+    x.plot(0.005);
+    x.play;
+)
+
+/* References
+   ==========
+   1. "http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html" */
