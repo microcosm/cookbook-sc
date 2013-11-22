@@ -132,7 +132,7 @@
    - This synthesis approximates a marimba */
 (
     x = {
-        LFTri.ar(440, mul: 0.4) + LFTri.ar(1760.00, mul: 0.15) !2;
+        LFTri.ar(440, mul: 0.4) + LFTri.ar(1760, mul: 0.15) !2;
     };
 
     x.plot(0.005);
@@ -143,5 +143,5 @@
    ==========
    1. Additive Synthesis examples
       http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html
-   2. Octave frequency tables
-      http://altered-states.net/barry/frequencies/octavefrequencytable.htm */
+   2. Frequency tables
+      http://en.wikipedia.org/wiki/Piano_key_frequencies */
