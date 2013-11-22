@@ -54,6 +54,7 @@
 
 /* Figure 5. A sawtooth.
    ====================
+   - Similar to brass and string instruments.
    - Now we are using Mix.fill to automate the process of extending the
      pattern above. Try adjusting ~numPartials to 50.
    - Note that ** is an exponent operator. The code '-1 ** i' produces
@@ -80,6 +81,7 @@
 
 /* Figure 7. A square wave.
    =======================
+   - Similar to woodwind instruments.
    - Only odd numbered partials.
    - Since we are now only dealing with every other partial, and dropping
      the in-between partials, we no longer have to keep switching from
@@ -102,9 +104,12 @@
 
 /* Figure 8. A triangle wave.
    =========================
+   - With their diminished higher harmonics, triangle waves are good for
+     mixing together to produce inharmonic sounds (bells, chimes etc) as
+     well as adding the occasional rogue harmonic to saw and pulse forms.
    - Only odd numbered partials.
-   - We are back to alternating between -1 and 1 which I don't really get since we are still using
-     only odd-numbered harmonics */
+   - We are back to alternating between -1 and 1 which I don't really get
+     since we are still using only odd-numbered harmonics */
 (
     ~peak = 0.8;
     ~numPartials = 20;
