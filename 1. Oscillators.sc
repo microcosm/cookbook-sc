@@ -100,6 +100,28 @@
     x.play;
 )
 
+/* Figure 8. A triangle wave.
+   =========================
+   - Only odd numbered partials.
+   - We are back to alternating between -1 and 1 which I don't really get since we are still using
+     only odd-numbered harmonics */
+(
+    ~peak = 0.8;
+    ~numPartials = 20;
+    ~fundamental = 440;
+
+    x = {
+        Mix.fill(~numPartials, {|i|
+            var j = (2 * i) + 1;
+            var mul = (-1 ** i) * (~peak / (j ** 2));
+            SinOsc.ar(~fundamental * j, mul: mul);
+        }) !2;
+    };
+
+    x.plot(0.005);
+    x.play;
+)
+
 /* References
    ==========
    1. "http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html" */
