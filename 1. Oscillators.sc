@@ -93,7 +93,7 @@
 
     x = {
         Mix.fill(~numPartials, {|i|
-            var j = (2 * i) + 1;
+            var j = (2 * i) + 1; //1, 3, 5 etc
             var mul = ~peak / j;
             SinOsc.ar(~fundamental * j, mul: mul);
         }) !2;
@@ -129,12 +129,10 @@
 
 /* Figure 12. Two triangle waves make a more harmonically rich sound.
    =================================================================
-   - This (poorly) approximates a marimba */
+   - This synthesis approximates a marimba */
 (
     x = {
-	    (
-		    (LFTri.ar(440, 0.7) + LFTri.ar(1046.50, mul: 0.2)
-	    ) * 0.8) !2;
+        LFTri.ar(440, mul: 0.4) + LFTri.ar(1760.00, mul: 0.15) !2;
     };
 
     x.plot(0.005);
