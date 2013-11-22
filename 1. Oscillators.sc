@@ -139,9 +139,30 @@
     x.play;
 )
 
+/* Figure 13. Narrower pulse widths.
+   ================================
+   - Narrowing the width of the pulse means introducing even numbered
+     partials alongside the odd ones.
+   - Therefore, narrowing the pulse width creates a brighter, edgier
+     sound similar to a sawtooth.
+   - However, the harmonics don't die out as quickly or with the same
+     uniformity as a sawtooth.
+   - Narrow pulses have a crisp, metallic sound. Undulating pattern
+     similar to many acoustic instruments. */
+x = {Pulse.ar(440, width: 0.5) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: 0.6) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: 0.7) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: 0.8) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: 0.9) !2}; x.plot(0.01); x.play;
+
+x = {Pulse.ar(440, width: MouseX.kr(0.1, 0.9)) !2}; x.plot(0.01); x.play;
+
+
 /* References
    ==========
    1. Additive Synthesis examples
       http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html
    2. Frequency tables
-      http://en.wikipedia.org/wiki/Piano_key_frequencies */
+      http://en.wikipedia.org/wiki/Piano_key_frequencies
+   3. Distinguishing pulse and square waves
+      http://en.wikipedia.org/wiki/Pulse_wave */
