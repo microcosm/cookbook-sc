@@ -127,6 +127,23 @@
     x.play;
 )
 
+/* Figure 12. Two triangle waves make a more harmonically rich sound.
+   =================================================================
+   - This (poorly) approximates a marimba */
+(
+    x = {
+	    (
+		    (LFTri.ar(440, 0.7) + LFTri.ar(1046.50, mul: 0.2)
+	    ) * 0.8) !2;
+    };
+
+    x.plot(0.005);
+    x.play;
+)
+
 /* References
    ==========
-   1. "http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html" */
+   1. Additive Synthesis examples
+      http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html
+   2. Octave frequency tables
+      http://altered-states.net/barry/frequencies/octavefrequencytable.htm */
