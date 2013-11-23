@@ -155,7 +155,8 @@ x = {Pulse.ar(440, width: 0.7) !2}; x.plot(0.01); x.play;
 x = {Pulse.ar(440, width: 0.8) !2}; x.plot(0.01); x.play;
 x = {Pulse.ar(440, width: 0.9) !2}; x.plot(0.01); x.play;
 
-x = {Pulse.ar(440, width: MouseX.kr(0.1, 0.9)) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: MouseX.kr(0.1, 0.5)) !2}; x.plot(0.01); x.play;
+x = {Pulse.ar(440, width: MouseX.kr(0.5, 0.9)) !2}; x.plot(0.01); x.play;
 
 
 /* References
