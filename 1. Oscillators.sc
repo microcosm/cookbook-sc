@@ -203,6 +203,9 @@ x = {BrownNoise.ar(0.4) !2}; x.plot(0.1); x.play;
      varying by a few cents at a time. This means that when several
      are played in unision, a 'thick', harmonically rich sound is
      created.
+   - With the 'perfectness' of the constituent tones in digital
+     oscillators, we have several options for how to implement
+     unison. A couple are sketched out below.
    - Ref: http://music.tutsplus.com/articles/the-low-down-on-chorus-and-unison-effects--audio-3628 */
 
 /* - A saw on it's own, for reference. */
