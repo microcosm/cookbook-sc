@@ -1,3 +1,24 @@
+/* The cookbook says...
+   ====================
+   "The process of adding sine waves together to create sounds is known as
+    additive synthesis. This method is used on a few digital synthesizers
+    and has also been used by pipe organs for hundreds of years..."
+
+   But the real aim of this chapter is to teach building blocks for later
+   ======================================================================
+   "Analog synthesizers use a process called subtractive synthesis which
+    is simply additive synthesis in reverse. Here's some terminology for
+    you: Sounds created by synthesizers are referred to as patches..."
+
+   "Patches created using subtractive synthesis start with waveforms that
+    are already rich in harmonics such as sawtooth, square, and triangle
+    waves. These waveforms are then passed to a filter which removes
+    harmonics from the waveforms in order to produce the desired sounds."
+
+   "The harmonics are subtracted out, hence the process is known as
+    subtractive synthesis."
+*/
+
 /* Figure 2. A 440Hz sine wave.
    =========================== */
 (
