@@ -46,7 +46,8 @@
    ==================
    - Figure 3 can be written another way by modifying the multiplier only
      instead of the phase.
-   - Notice the use of a negative value for the 880Hz SinOsc. */
+   - Notice the use of a negative value for the 880Hz SinOsc.
+   - Ref: http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html */
 (
     ~peak = 0.75;
     x = {
@@ -60,7 +61,8 @@
 /* Figure 4. Three sine waves of frequency 440Hz, 880Hz, and 1320Hz.
    ================================================================
    - Notice we had to adjust the peak, and a pattern is starting to emerge
-     for multiplying by positive and negative numbers. */
+     for multiplying by positive and negative numbers.
+   - Ref: http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html */
 (
     ~peak = 0.65;
     x = {
@@ -83,7 +85,8 @@
      -1 ** 0 == 1
      -1 ** 1 == -1
      -1 ** 2 == 1
-     -1 ** 3 == -1 etc. */
+     -1 ** 3 == -1 etc.
+   - Ref: http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html */
 (
     ~peak = 0.5;
     ~numPartials = 15;
@@ -106,7 +109,8 @@
    - Only odd numbered partials.
    - Since we are now only dealing with every other partial, and dropping
      the in-between partials, we no longer have to keep switching from
-     positive to negative multiplier values. */
+     positive to negative multiplier values.
+   - Ref: http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html */
 (
     ~peak = 0.5;
     ~numPartials = 50;
@@ -130,7 +134,8 @@
      well as adding the occasional rogue harmonic to saw and pulse forms.
    - Only odd numbered partials.
    - We are back to alternating between -1 and 1 which I don't really get
-     since we are still using only odd-numbered harmonics */
+     since we are still using only odd-numbered harmonics.
+   - Ref: http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html */
 (
     ~peak = 0.8;
     ~numPartials = 20;
@@ -150,7 +155,8 @@
 
 /* Figure 12. Two triangle waves make a more harmonically rich sound.
    =================================================================
-   - This synthesis approximates a marimba */
+   - This synthesis approximates a marimba
+   - Ref: http://en.wikipedia.org/wiki/Piano_key_frequencies */
 (
     x = {
         LFTri.ar(440, mul: 0.4) + LFTri.ar(1760, mul: 0.15) !2;
@@ -169,7 +175,8 @@
    - However, the harmonics don't die out as quickly or with the same
      uniformity as a sawtooth.
    - Narrow pulses have a crisp, metallic sound. Undulating pattern
-     similar to many acoustic instruments. */
+     similar to many acoustic instruments.
+   - Ref: http://en.wikipedia.org/wiki/Pulse_wave */
 x = {Pulse.ar(440, width: 0.5) !2}; x.plot(0.01); x.play;
 x = {Pulse.ar(440, width: 0.6) !2}; x.plot(0.01); x.play;
 x = {Pulse.ar(440, width: 0.7) !2}; x.plot(0.01); x.play;
@@ -178,13 +185,3 @@ x = {Pulse.ar(440, width: 0.9) !2}; x.plot(0.01); x.play;
 
 x = {Pulse.ar(440, width: MouseX.kr(0.1, 0.5)) !2}; x.plot(0.01); x.play;
 x = {Pulse.ar(440, width: MouseX.kr(0.5, 0.9)) !2}; x.plot(0.01); x.play;
-
-
-/* References
-   ==========
-   1. Additive Synthesis examples
-      http://www.sussex.ac.uk/Users/nc81/modules/cm1/scfiles/2.1 Subtractive and Additive Synthesis.html
-   2. Frequency tables
-      http://en.wikipedia.org/wiki/Piano_key_frequencies
-   3. Distinguishing pulse and square waves
-      http://en.wikipedia.org/wiki/Pulse_wave */
