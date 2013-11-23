@@ -196,3 +196,59 @@ x = {Pulse.ar(440, width: MouseX.kr(0.5, 0.9)) !2}; x.plot(0.01); x.play;
 x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
 x = {PinkNoise.ar(0.4)  !2}; x.plot(0.1); x.play;
 x = {BrownNoise.ar(0.4) !2}; x.plot(0.1); x.play;
+
+/* Figure 19. Unison broadens the harmonics of a waveform.
+   ======================================================
+   - True analog oscillators cannot keep exactly the same tuning,
+     varying by a few cents at a time. This means that when several
+     are played in unision, a 'thick', harmonically rich sound is
+     created.
+   - Ref: http://music.tutsplus.com/articles/the-low-down-on-chorus-and-unison-effects--audio-3628 */
+
+/* - A saw on it's own, for reference. */
+{Saw.ar(220) !2}.play;
+
+/* - Multiple saws at slightly different frequencies. Because the
+     frequencies are slightly different we get a phasing effect as
+     the tones pass over each other. */
+(
+    ~numVoices = 5;
+    ~offset = floor(~numVoices/2);
+    ~freq = 220;
+    ~distance = 0.3;
+
+    x = {
+        ~freq.post; "Hz in ".post; ~numVoices.post; " voices, distribued:".postln;
+
+        m = Mix.fill(~numVoices, {|i|
+            var detuneAmount = (i - ~offset) * ~distance;
+            var thisFreq = ~freq + detuneAmount;
+            thisFreq.post; " ".postln;
+            LFSaw.ar(thisFreq);
+        });
+        m / ~numVoices !2;
+    };
+    x.plot(0.005);
+    x.play;
+)
+
+/* - Multiple saws, this time at the same frequency but at slightly
+     different phases. No phasing, and a thicker sound. */
+(
+    ~numVoices = 5;
+    ~freq = 220;
+    ~distance = pi * 0.05;
+
+    x = {
+        ~freq.post; "Hz in ".post; ~numVoices.post; " voices, distanced:".postln;
+
+        m = Mix.fill(~numVoices, {|i|
+            var thisDistance = i * ~distance;
+            thisDistance.post; " ".postln;
+            LFSaw.ar(~freq, thisDistance);
+        });
+        m / ~numVoices !2;
+    };
+    x.plot(0.005);
+    x.play;
+)
