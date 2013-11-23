@@ -1,14 +1,34 @@
 /*
-   The most helpful key combinations for the SuperCollider IDE.
+   This file is intended to help you get started, the first time you
+   run SuperCollider, the first time you work through the patches /
+   the cookbook, and each time you come back and start working with
+   SuperCollider again.
 
+   If anything in this file doesn't make sense, or if you don't now
+   what 'the cookbook' is, go check out the README.
+
+   In this file:
+   1. The most helpful key combinations for the SuperCollider IDE
+   2. A test tone to ensure your sound is working
+   3. A test plot to get you used to visualizing waveforms
+   4. A codeblock and instructions to launch Oscilloscope and
+      Frequency Analysis windows, to match the cookbook
+*/
+
+/* ==============================================================
+   1. The most helpful key combinations for the SuperCollider IDE
+   ==============================================================
+
+   -----------
    Shift-Cmd-B
-   ===========
-   Position your cursor to the right of the open bracket '(' below.
-   Now press Shift-Cmd-B. Notice how all the code inside the brackets
-   is highlighted?
+   -----------
+   Position your cursor to the right of the open bracket '(' in the
+   last codeblock below. Now press Shift-Cmd-B. Notice how all the
+   code inside the brackets is highlighted?
 
+   -----------
    Shift-Enter
-   ===========
+   -----------
    Once you have a codeblock selected, use Shift-Enter to evaluate
    the selected code. You should hear sound playing, OR see some
    response in the Post window.
@@ -16,51 +36,64 @@
    Note that you can also place your cursor anywhere on a single line
    of code and press Shift-Enter to execute only that line of code.
 
+   -----
    Cmd-.
-   =====
+   -----
    Stop all playback.
 
+   -----
    Cmd-D
-   =====
+   -----
    With your cursor on some evaluable code element, like SinOsc or
    scope, using Cmd-D will display the relevant help file in the
    Help Browser window.
 
+   -------
    Cmd -/+
-   =======
+   -------
    Adjust text size in the code editor or Post window. Note that you
    can default text size in Preferences > Editor > Font & Colors
 
 */
 
-/* 1. Place your cursor at the end of the code below, after play.
-      Press Shift-Enter. This should make sound.
-      - ALWAYS start with the volume LOW, then start the sound, then
-        creep the volume up.
-      - If you can't hear anything, check your speakers and your
-        audio configuration. */
+/* ==============================================
+   2. A test tone to ensure your sound is working
+   ==============================================
+   Place your cursor at the end of the line of code below, after
+   play. Press Shift-Enter. This should make sound.
+    - ALWAYS start with the volume LOW, then start the sound, then
+      creep the volume up.
+    - If you can't hear anything, check your speakers and your
+      audio configuration. */
 { SinOsc.ar(440)!2 }.play
 
-/* 2. To visualize any sound function block like the one above,
-      switch play for plot.
-      - The argument is the number of seconds of playback to plot.
-        When you evaluate these lines you have to wait that number
-        of seconds before the results appear in the window. */
+/* =======================================================
+   3. A test plot to get you used to visualizing waveforms
+   =======================================================
+   To visualize any sound function block like the one above,
+   switch play for plot.
+    - The argument is the number of seconds of playback to plot.
+      When you evaluate these lines you have to wait that number
+      of seconds before the results appear in the window. */
 { SinOsc.ar(440)!2 }.plot(0.01)
 { SinOsc.ar(440)!2 }.plot(2)
 
-/* 3. Start your engines!
-      The codeblock below will give you an FFT window and an
-      Oscilloscope window.
-      - Once you run the codeblock the Oscilloscope window will jump
-        to the front. Press Cmd-Tab twice to bring the FFT window to
-        the front too.
-      - Arrange the windows on your screen so that you can see both
-        these windows while you work.
-      - To make the FFT window match the cookbook, switch the FrcScl
-        drop-down to 'lin' for linear. If you do this after you have
-        sounds playing, you will need to stop the playback and
-        restart the sound to see the change. */
+/* ==========================================================
+   4. A codeblock and instructions to launch Oscilloscope and
+      Frequency Analysis windows, to match the cookbook
+   ==========================================================
+   Position your cursor to the right of the open bracket '(' below,
+   and use Shift-Cmd-B and Shift-Enter to execute the codeblock as
+   described above.
+    - Once you run the codeblock the Oscilloscope window will jump
+      to the front. Press Cmd-Tab twice to bring the FFT window to
+      the front too.
+    - Arrange the windows on your screen so that you can see both
+      these windows while you work.
+    - To make the FFT window match the cookbook, switch the FrcScl
+      drop-down to 'lin' for linear. If you do this after you have
+      sounds playing, you will need to stop the playback and
+      restart the sound to see the change. */
 (
     /* FFT Window */
     Server.quitAll;
