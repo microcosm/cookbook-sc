@@ -139,8 +139,8 @@
     x.play;
 )
 
-/* Figure 13. Narrower pulse widths.
-   ================================
+/* Figure 13. Narrower pulse widths on square waves.
+   ================================================
    - Narrowing the width of the pulse means introducing even numbered
      partials alongside the odd ones.
    - Therefore, narrowing the pulse width creates a brighter, edgier
