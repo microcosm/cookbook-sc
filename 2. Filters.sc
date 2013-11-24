@@ -9,12 +9,16 @@
     waveforms."
 */
 
-/* Figures 20, 21. Filtered white noise.
-   ====================================
-   - Unfiltered white noise, for reference. */
+/* Figure 20. Unfiltered white noise, for reference.
+   ================================================ */
 x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
 
-/* - White noise routed through a low-pass filter.
+/* Figures 21, 22. High-and-low pass filters.
+   =========================================
+   - White noise routed through a low-pass filter.
    - Note that a frequency argument has been added to shape the waveform
      similar to the cookbook. */
 x = {LPF.ar(WhiteNoise.ar(0.4), 4000) !2}; x.plot(0.1); x.play;
+
+/* - White noise routed through a high-pass filter. */
+x = {HPF.ar(WhiteNoise.ar(0.4), 4000) !2}; x.plot(0.1); x.play;
