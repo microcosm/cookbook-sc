@@ -15,9 +15,7 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
 
 /* Figures 21, 22. High-and-low pass filters.
    =========================================
-   - White noise routed through a low-pass filter.
-   - Note that a frequency argument has been added to shape the waveform
-     similar to the cookbook. */
+   - White noise routed through a low-pass filter. */
 x = {LPF.ar(WhiteNoise.ar(0.4), 4000) !2}; x.plot(0.1); x.play;
 x = {LPF.ar(WhiteNoise.ar(0.4), MouseY.kr(110, 16000)) !2}; x.plot(0.1); x.play;
 
@@ -27,12 +25,10 @@ x = {HPF.ar(WhiteNoise.ar(0.4), MouseY.kr(110, 16000)) !2}; x.plot(0.1); x.play;
 
 /* Figures 23, 24. Bandpass and band-reject/notch filters.
    ======================================================
-   - White noise routed through a bandpass filter.
-   - Note that a frequency argument has been added to shape the waveform
-     similar to the cookbook. */
+   - White noise routed through a bandpass filter. */
 x = {BPF.ar(WhiteNoise.ar(0.4), 4000, 0.01) !2}; x.plot(0.1); x.play;
 x = {BPF.ar(WhiteNoise.ar(0.4), MouseY.kr(110, 23000), MouseX.kr(0.01, 0.99)) !2}; x.plot(0.1); x.play;
 
-/* - White noise routed through a high-pass filter. */
+/* - White noise routed through a band-reject/notch filter. */
 x = {BRF.ar(WhiteNoise.ar(0.4), 4000, 0.99) !2}; x.plot(0.1); x.play;
 x = {BRF.ar(WhiteNoise.ar(0.4), MouseY.kr(110, 23000), MouseX.kr(0.01, 0.99)) !2}; x.plot(0.1); x.play;
