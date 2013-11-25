@@ -168,3 +168,16 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
     x.plot(0.1);
     x.play;
 )
+
+/* Figure 29. A resonant LPF.
+   ========================= */
+(
+    x = {
+        RLPF.ar(
+            in: WhiteNoise.ar(0.4),
+            freq: 4000,
+            rq: 0.05
+        )!2};
+    x.plot(0.1);
+    x.play;
+)
