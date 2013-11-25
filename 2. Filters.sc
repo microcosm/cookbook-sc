@@ -172,11 +172,39 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
 /* Figure 29. A resonant LPF.
    ========================= */
 (
+    //with a fixed cutoff frequency...
     x = {
         RLPF.ar(
             in: WhiteNoise.ar(0.4),
             freq: 4000,
             rq: 0.05
+        )!2};
+    x.plot(0.1);
+    x.play;
+)
+(
+    //with a mouse-adjustable cutoff frequency...
+    x = {
+        RLPF.ar(
+            in: WhiteNoise.ar(0.1),
+            freq: MouseX.kr(0,1600),
+            rq: 0.005
+        )!2};
+    x.plot(0.5);
+    x.play;
+)
+(
+    //using Resonz, a stronger RLPF
+    /* Ref: "http://danielnouri.org/docs/SuperColliderHelp/Tutorials/Mark_Polishook_tutorial/Synthesis/10_Subtractive_synthesis.html"
+       Note that 'bwr' appears to be equivalent to 'rq'. But with
+       explanation:
+       "The reciprocal of Q is used rather than Q because it saves a
+        divide operation inside the unit generator." */
+    x = {
+        Resonz.ar(
+            in: WhiteNoise.ar(1),
+            freq: MouseX.kr(0,1600),
+            bwr: 0.005
         )!2};
     x.plot(0.1);
     x.play;
