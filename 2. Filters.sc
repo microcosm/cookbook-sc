@@ -11,7 +11,7 @@
 
 /* Figure 20. Unfiltered white noise, for reference.
    ================================================ */
-x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
+x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
 
 /* Figure 21. White noise routed through a low-pass filter.
    =======================================================
@@ -124,6 +124,7 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
     x.plot(0.1);
     x.play;
 )
+
 /* Figure 25. White noise through an LPF with a 6kHz cutoff frequency.
    ================================================================== */
 (
@@ -132,6 +133,27 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
         LPF.ar(
             in: WhiteNoise.ar(0.4),
             freq: 6000
+        )!2};
+    x.plot(0.1);
+    x.play;
+)
+
+/* Figure 26. Filter response of a four-pole filter.
+   ================================================
+   - A four-pole filter is one that gives 24dB of attenuation per
+     octave.
+   - 'Octave' is a relative term, and when we talk about filters,
+     by convention our first octave is at 4kHz.
+   - So as the cookbook says:
+     "Material at 8kHz is attenuated 24dB more than material at
+     4kHz since these frequencies are one octave apart."
+   - You can check this in the frequency analyzer! */
+(
+    //with a fixed cutoff frequency
+    x = {
+        LPF.ar(
+            in: WhiteNoise.ar(0.4),
+            freq: 4000
         )!2};
     x.plot(0.1);
     x.play;
