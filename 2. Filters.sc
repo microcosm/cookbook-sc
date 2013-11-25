@@ -209,3 +209,34 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
     x.plot(0.1);
     x.play;
 )
+
+/* A first stab at the acid track synthesizer example cited at the end
+   of the Filters chapter. */
+(
+    SynthDef(\acid, { |freq = 440, sustain = 1, amp = 0.5|
+        var sig;
+
+        //lead line
+        sig = LFSaw.ar(freq, 0, amp) *
+            EnvGen.kr(Env.linen(0.1, sustain, 0.1), doneAction: 2);
+
+        //bass line
+        sig = sig + LFSaw.ar(freq * 0.25, 0, amp) *
+            EnvGen.kr(Env.linen(0.01, sustain, 0.01), doneAction: 2);
+
+        //resonant filter over each note
+        sig = RLPF.ar(sig, Line.kr(freq, freq * 2.5, sustain * 0.8), 0.25);
+
+        //resonant filter over whole thing
+        sig = RLPF.ar(sig, MouseX.kr(100, 1600), 0.25);
+
+        //out
+        Out.ar(0, sig ! 2)
+    }).add;
+
+    p = Pbind(
+        \instrument, \acid,
+        \midinote, Pseq([50,  62,  61,  57,  62,  62,  57], inf),
+        \dur,      Pseq([0.5, 0.5, 0.1, 0.1, 0.45, 0.25, 0.1], inf)
+    ).play;
+)
