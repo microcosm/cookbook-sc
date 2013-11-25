@@ -82,6 +82,7 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
     x.play;
 )
 (
+    /* === WARNING - READ THE SAFETY NOTES === */
     //with a mouse-adjustable center frequency and rq...
     x = {
         BPF.ar(
@@ -112,6 +113,7 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
     x.play;
 )
 (
+    /* === WARNING - READ THE SAFETY NOTES === */
     //with a mouse-adjustable center frequency and rq...
     x = {
         BRF.ar(
