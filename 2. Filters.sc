@@ -128,7 +128,6 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
 /* Figure 25. White noise through an LPF with a 6kHz cutoff frequency.
    ================================================================== */
 (
-    //with a fixed cutoff frequency
     x = {
         LPF.ar(
             in: WhiteNoise.ar(0.4),
@@ -138,20 +137,31 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
     x.play;
 )
 
-/* Figure 26. Filter response of a four-pole filter.
-   ================================================
-   - A four-pole filter is one that gives 24dB of attenuation per
-     octave.
-   - 'Octave' is a relative term, and when we talk about filters,
-     by convention our first octave is at 4kHz.
+/* Figure 26. Slope of a 4-pole filter.
+   ===================================
+   - A 4-pole filter is one that gives 24dB of attenuation per octave.
+   - 'Octave' is a relative term, and when we talk about filters, by
+     convention our first octave is at 4kHz.
    - So as the cookbook says:
-     "Material at 8kHz is attenuated 24dB more than material at
-     4kHz since these frequencies are one octave apart."
+     "Material at 8kHz is attenuated 24dB more than material at 4kHz
+      since these frequencies are one octave apart."
    - You can check this in the frequency analyzer! */
 (
-    //with a fixed cutoff frequency
     x = {
         LPF.ar(
+            in: WhiteNoise.ar(0.4),
+            freq: 4000
+        )!2};
+    x.plot(0.1);
+    x.play;
+)
+
+/* Figure 27. Slope of a 2-pole filter.
+   ===================================
+   - A 2-pole filter is one that gives 12dB of attenuation per octave. */
+(
+    x = {
+        TwoPole.ar(
             in: WhiteNoise.ar(0.4),
             freq: 4000
         )!2};
