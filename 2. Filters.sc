@@ -124,3 +124,15 @@ x = {WhiteNoise.ar(0.4) !2}; x.plot(0.1); x.play;
     x.plot(0.1);
     x.play;
 )
+/* Figure 25. White noise through an LPF with a 6kHz cutoff frequency.
+   ================================================================== */
+(
+    //with a fixed cutoff frequency
+    x = {
+        LPF.ar(
+            in: WhiteNoise.ar(0.4),
+            freq: 6000
+        )!2};
+    x.plot(0.1);
+    x.play;
+)
