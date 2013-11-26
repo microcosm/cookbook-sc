@@ -236,12 +236,12 @@ x = { WhiteNoise.ar(0.4) !2 }; x.plot(0.1); x.play;
         sig = RLPF.ar(sig, MouseX.kr(100, 1600), 0.25);
 
         //out
-        Out.ar(0, sig ! 2)
+        Out.ar(0, sig!2)
     }).add;
 
     p = Pbind(
         \instrument, \acid,
-        \midinote, Pseq([50,  62,  61,  57,  62,  62,  57], inf),
+        \midinote, Pseq([50,  62,  61,  57,  62,   62,   57],  inf),
         \dur,      Pseq([0.5, 0.5, 0.1, 0.1, 0.45, 0.25, 0.1], inf)
     ).play;
 )
