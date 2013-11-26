@@ -2,11 +2,11 @@
 
 ## What is this repo?
 
-This repo contains SuperCollider examples for the figures in Welsh's Synthesizer Cookbook.
+This repo is designed to *help you learn synthesizer fundamentals at the same time as learning SuperCollider*. It contains SuperCollider examples for the figures in Welsh's Synthesizer Cookbook.
 
-It's designed to help learn synthesizer fundamentals at the same time as learning SuperCollider.
+If you are new to computer music, or don't fully understand the above lines, check out the advice below: *"I'm new to computer music, what should I do?"*.
 
-Note: You can assume that all accompanying notes (in the comments) are either quotes from the cookbook, or based on information from the cookbook. Any information from other sources is quoted.
+Note: You can assume that all accompanying notes in the code comments are based on information from the cookbook. Any information from other sources is quoted.
 
 ## Why did you create this repo?
 
@@ -34,7 +34,7 @@ When I was new to computer music I was already familiar with programming. That's
 
 If you are not familiar with programming, SuperCollider may not be the option for you. I would suggest you go and check out some of the many awesome GUI-driven synthesis engines out there.
 
-However, if you are still interested, I left a trail behind me while I learned. Some blog posts and references that really helped, others I wrote because I wanted them and they weren't there. This is the route that worked for me:
+However, if you are still interested, I left a trail behind me while I learned. Some blog posts and references really helped, others I wrote because I wanted them and they weren't there. This is the route that worked for me:
 
 1. **To get grounding to what SuperCollider is and if it will work for you**, check out my article: [Getting Started with SuperCollider](http://jahya.net/blog/?2012-05-getting-started-with-supercollider)
 
