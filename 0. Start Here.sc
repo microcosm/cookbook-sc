@@ -1,13 +1,18 @@
 /*
-   This file is intended to help you get started, the first time you
-   run SuperCollider, the first time you work through the patches /
-   the cookbook, and each time you come back and start working with
-   SuperCollider again.
+   -------------
+   0. START HERE
+   -------------
 
-   If anything in this file doesn't make sense, or if you don't now
+   This file is intended to help you get started! You will probably
+   want to read this file before you start the first chapter, but
+   you will also probably want to refer back here each time you
+   start a new SuperCollider session.
+
+   If anything in this file doesn't make sense, or if you don't know
    what 'the cookbook' is, go check out the README.
 
    In this file:
+   ============
    1. The most helpful key combinations for the SuperCollider IDE
    2. A test tone to ensure your sound is working
    3. A test plot to get you used to visualizing waveforms
