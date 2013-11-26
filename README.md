@@ -30,12 +30,20 @@ Be sure to get back to me with comments and improvements. Better still, fork the
 
 ## I'm new to computer music, what should I do?
 
-When I was new to computer music I was already familiar with programming. That's one reason that SuperCollider was an appealing option for me. It is about code + sound, and so I get all the benefits of being able to program, for example being able to hook up my sounds to ad-hoc [sensors](https://www.adafruit.com/), or other [custom software environments](http://www.openframeworks.cc/) and so on. If you are not familiar with programming, SuperCollider may not be the option for you.
+When I was new to computer music I was already familiar with programming. That's one reason that SuperCollider was an appealing option for me. It is about code + sound, and so I get all the benefits of being able to program, for example being able to hook up my sounds to ad-hoc [sensors](https://www.adafruit.com/), or other [custom software environments](http://www.openframeworks.cc/) and so on.
 
-If you are still interested, I left a trail behind me so you can track my steps.
+If you are not familiar with programming, SuperCollider may not be the option for you. I would suggest you go and check out some of the many awesome GUI-driven synthesis engines out there.
 
-1. To get grounding to what SuperCollider is and if it will work for you, check out my article: [Getting Started with SuperCollider](http://jahya.net/blog/?2012-05-getting-started-with-supercollider)
-2. To plough ahead and learn the SuperCollider environment hands-on, read [Read Scott Wilson's tutorial](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/Tutorials/Getting-Started/Getting%20Started%20With%20SC.html). This will get you to an understanding of the tools and building blocks at your fingertips.
-3. Use my QuickRef to refresh your memory on all the topics and important examples covered in Scott Wilson's tutorial [Quick Reference for SuperCollider](http://jahya.net/blog/?2012-06-quickref-for-supercollider)
-3. Get a copy of [the cookbook](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S).
-4. Use this repo and the patches inside it - and drop me a message to tell how you got on. Better still, fork the repo and submit pull requests with your contributions!
+However, if you are still interested, I left a trail behind me while I learned. Some blog posts and references that really helped, others I wrote because I wanted them and they weren't there. This is the route that worked for me:
+
+1. **To get grounding to what SuperCollider is and if it will work for you**, check out my article: [Getting Started with SuperCollider](http://jahya.net/blog/?2012-05-getting-started-with-supercollider)
+
+2. **To plough ahead and learn the SuperCollider environment hands-on**, read [Scott Wilson's tutorial](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/Tutorials/Getting-Started/Getting%20Started%20With%20SC.html). This will get you to an understanding of the tools and building blocks at your fingertips.
+
+3. **As you go forward and start making sounds**, use my one-page [Quick Reference for SuperCollider](http://jahya.net/blog/?2012-06-quickref-for-supercollider) to refresh your memory. It gives you concise versions of all the examples you learned from Scott Wilson's tutorial, and saves you having to dig back through to find what you were looking for.
+
+4. Now that you know about the SuperCollider environment and how to create synths, you need a **crash course in audio synthesis**. Get a copy of [the cookbook](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S) - the first few chapters are the best crash course I've found. And this repo contains codeblocks which match the figures!
+
+P.S. For ad-hoc help along the way, check out this amazing array of quick tutorial videos by WickieMedia, [here](http://www.youtube.com/user/wickiemedia) or [here](http://www.wickiemedia.net/audio-tutorials.html).
+
+Also, drop me a message to tell how you got on. Better still, fork the repo and submit pull requests with your contributions!
