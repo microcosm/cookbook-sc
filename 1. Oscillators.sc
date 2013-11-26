@@ -1,4 +1,9 @@
-/* The cookbook says...
+/*
+   --------------
+   1. OSCILLATORS
+   --------------
+
+   The cookbook says...
    ====================
    "The process of adding sine waves together to create sounds is known as
     additive synthesis. This method is used on a few digital synthesizers

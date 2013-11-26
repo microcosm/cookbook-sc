@@ -1,4 +1,9 @@
-/* The cookbook says...
+/*
+   ----------
+   2. FILTERS
+   ----------
+
+   The cookbook says...
    ====================
    "The incorporation of filters was the first great revolution in early
     electronic music after the oscillator. There are only a few distinct
