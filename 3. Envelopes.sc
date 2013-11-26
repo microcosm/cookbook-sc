@@ -64,3 +64,6 @@
     x.plot(10);
     SystemClock.sched(6, { y.set(\gate, 0); });
 )
+
+/* Note: there is a final example on this page that is
+   worth adding once the above two examples are fixed! */
