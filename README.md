@@ -2,27 +2,26 @@
 
 ## What is this repo?
 
-This repo is designed to *help you learn synthesizer fundamentals at the same time as learning SuperCollider*. It contains SuperCollider examples for the figures in Welsh's Synthesizer Cookbook.
+This repo is designed to help you learn **synthesizer fundamentals** at the same time as learning **SuperCollider**. All the figures from the fundamental chapters of **Welsh's Synthesizer Cookbook** are sketched out as code examples with labels, so you can easily cross-reference.
 
-If you are new to computer music, or don't fully understand the above lines, check out the advice below: *"I'm new to computer music, what should I do?"*.
+- Note: Newbies check out the section below:  
+**I'm new to computer music, what should I do?**
 
-Note: You can assume that all accompanying notes in the code comments are based on information from the cookbook. Any information from other sources is quoted.
+- Note: All accompanying notes in code comments are based on or inspired by the book, unless otherwise quoted.
 
-## Why did you create this repo?
+## What is SuperCollider?
 
-I wanted a hands-on guide that would give me whirlwind explanation of synthesis at a basic level. I wanted a reference that did this in the context of SuperCollider, but I couldn't find one. So I read the book and wrote the best SuperCollider examples I could think of at the time.
+SuperCollider is a software audio synthesis engine and [domain-specific language](http://en.wikipedia.org/wiki/Domain-specific_language) for sound artists, musicians, programmers and academics. It allows you to program (code) sound and music.
 
-## What is the cookbook?
+Read more [here](http://jahya.net/blog/?2012-05-getting-started-with-supercollider) and [here](http://en.wikipedia.org/wiki/SuperCollider).
+
+## What is Welsh's Synthesizer Cookbook?
 
 The first few chapters are a quick, hands-on introduction to synthesis fundamentals. The rest of the book is a catalog of ingredient recipes for using what you have learned to build snythesizers.
 
 [ ![Welsh's Synthesizer Cookbook](http://3.bp.blogspot.com/-Kllf8JcKhcM/UpLsxkKci6I/AAAAAAAAC64/oFjvvJr74is/s400/cookbook.jpg) ](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S)
 
-## What is SuperCollider?
-
-SuperCollider is a software audio synthesis engine and [domain-specific language](http://en.wikipedia.org/wiki/Domain-specific_language) for sound artists, musicians, programmers and academics. You can read more about it [here](http://jahya.net/blog/?2012-05-getting-started-with-supercollider) and [here](http://en.wikipedia.org/wiki/SuperCollider).
-
-## I know all this, can I get started?
+## OK, got it, can I get started?
 
 Sure, dive in. The code is all sclang ready.
 
@@ -47,3 +46,7 @@ However, if you are still interested, I left a trail behind me while I learned. 
 P.S. For ad-hoc help along the way, check out this amazing array of quick tutorial videos by WickieMedia, [here](http://www.youtube.com/user/wickiemedia) or [here](http://www.wickiemedia.net/audio-tutorials.html).
 
 Also, drop me a message to tell how you got on. Better still, fork the repo and submit pull requests with your contributions!
+
+## Why did you create this repo?
+
+I wanted a hands-on guide that would give me whirlwind explanation of synthesis at a basic level. I wanted a reference that did this in the context of SuperCollider, but I couldn't find one. So I read the book and wrote the best SuperCollider examples I could think of at the time.
