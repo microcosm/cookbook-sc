@@ -30,10 +30,17 @@ There is an introductory code file that will get you off the ground with SuperCo
 Then, the meat:
 
 1. Additive synthesis
+ - Sine, sawtooth, square and triangle waves
+ - White, pink and brown noise
 2. Subtractive synthesis
+ - Low-pass & high-pass filters
+ - Band-pass & band-reject/notch filters
+ - Slopes & poles
+ - Resonant filters
 3. Envelopes
+ - Attack, decay, sustain and release
 
-Finally there is a safety file to make sure you don't blow your speakers, or your ears in the process! SuperCollider will let you pipe literally anything to your sound card.
+Finally there is a safety file to make sure you don't blow your speakers, or your ears in the process! SuperCollider will let you pipe literally anything to your sound card. Make sure you know about common mistakes!
 
 ## OK, got it, can I get started?
 
