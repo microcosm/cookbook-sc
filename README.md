@@ -2,7 +2,9 @@
 
 ## What is this repo?
 
-This repo is designed to help you learn **synthesizer fundamentals** at the same time as learning **SuperCollider**. All the figures from the fundamental chapters of **Welsh's Synthesizer Cookbook** are sketched out as code examples with labels, so you can easily cross-reference.
+This repo is designed to help you learn **synthesizer fundamentals** at the same time as learning **SuperCollider**. Inside you will find runnable code examples for all the figures from the foundational synthesis chapters of **Welsh's Synthesizer Cookbook**.
+
+The code is labelled with figure numbers and explanatory notes to make it easy to cross-reference, and to hear how the figures sound in the SuperCollider synthesis environment.
 
 - Note: Newbies check out the section below:  
 **I'm new to computer music, what should I do?**
@@ -21,6 +23,18 @@ The first few chapters are a quick, hands-on introduction to synthesis fundament
 
 [ ![Welsh's Synthesizer Cookbook](http://3.bp.blogspot.com/-Kllf8JcKhcM/UpLsxkKci6I/AAAAAAAAC64/oFjvvJr74is/s400/cookbook.jpg) ](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S)
 
+## What topics are covered?
+
+There is an introductory code file that will get you off the ground with SuperCollider, to make sure you can hear sound, and see the oscilloscope and frequency analysis views. It also provides keyboard shortcuts and advice.
+
+Then, the meat:
+
+1. Additive synthesis
+2. Subtractive synthesis
+3. Envelopes
+
+Finally there is a safety file to make sure you don't blow your speakers, or your ears in the process! SuperCollider will let you pipe literally anything to your sound card.
+
 ## OK, got it, can I get started?
 
 Sure, dive in. The code is all sclang ready.
@@ -35,13 +49,13 @@ If you are not familiar with programming, SuperCollider may not be the option fo
 
 However, if you are still interested, I left a trail behind me while I learned. Some blog posts and references really helped, others I wrote because I wanted them and they weren't there. This is the route that worked for me:
 
-1. **To get grounding to what SuperCollider is and if it will work for you**, check out my article: [Getting Started with SuperCollider](http://jahya.net/blog/?2012-05-getting-started-with-supercollider)
+1. **To get a grounding in what SuperCollider is and if it will work for you**, check out my article: [Getting Started with SuperCollider](http://jahya.net/blog/?2012-05-getting-started-with-supercollider)
 
-2. **To plough ahead and learn the SuperCollider environment hands-on**, read [Scott Wilson's tutorial](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/Tutorials/Getting-Started/Getting%20Started%20With%20SC.html). This will get you to an understanding of the tools and building blocks at your fingertips.
+2. **To plough ahead and learn the SuperCollider environment hands-on**, read [Scott Wilson's tutorial](http://supercollider.svn.sourceforge.net/viewvc/supercollider/trunk/common/build/Help/Tutorials/Getting-Started/Getting%20Started%20With%20SC.html). This will give you an understanding of the tools and building blocks SuperCollider puts at your fingertips.
 
-3. **As you go forward and start making sounds**, use my one-page [Quick Reference for SuperCollider](http://jahya.net/blog/?2012-06-quickref-for-supercollider) to refresh your memory. It gives you concise versions of all the examples you learned from Scott Wilson's tutorial, and saves you having to dig back through to find what you were looking for.
+3. **As you go forward and start making sounds**, use my one-page [Quick Reference for SuperCollider](http://jahya.net/blog/?2012-06-quickref-for-supercollider) to refresh your memory. It gives you concise versions of all the examples you learned from Scott Wilson's tutorial (above), and saves you having to dig back through to find what you were looking for.
 
-4. Now that you know about the SuperCollider environment and how to create synths, you need a **crash course in audio synthesis**. Get a copy of [the cookbook](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S) - the first few chapters are the best crash course I've found. And this repo contains codeblocks which match the figures!
+4. Now that you understand the SuperCollider environment and how to create synths, you need a **crash course in audio synthesis** - that's what this repo is for. Grab your copy of [the cookbook](http://www.amazon.com/Welshs-Synthesizer-Cookbook-Programming-Universal/dp/B000ERHA4S) and dig in!
 
 P.S. For ad-hoc help along the way, check out this amazing array of quick tutorial videos by WickieMedia, [here](http://www.youtube.com/user/wickiemedia) or [here](http://www.wickiemedia.net/audio-tutorials.html).
 
